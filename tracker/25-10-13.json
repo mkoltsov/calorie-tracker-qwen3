@@ -43,8 +43,19 @@
         "fat": 7.2,
         "calories": 334.0
       }
+    },
+    {
+      "timestamp": "2025-10-13T23:52:04.042587",
+      "food": "frozen blueberries and watermelon",
+      "amount": "300g",
+      "nutrition": {
+        "proteins": 3.9,
+        "carbs": 62.1,
+        "fat": 1.5,
+        "calories": 261.0
+      }
     }
   ],
-  "total_calories": 1244.0,
+  "total_calories": 1505.0,
   "date": "25-10-13"
 }
