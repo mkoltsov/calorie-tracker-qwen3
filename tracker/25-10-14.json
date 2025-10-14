@@ -10,8 +10,19 @@
         "fat": 36.0,
         "calories": 529.0
       }
+    },
+    {
+      "timestamp": "2025-10-14T13:26:06.077755",
+      "food": "roast beef sandwich and pieces of pineapple",
+      "amount": "300g",
+      "nutrition": {
+        "proteins": 22.0,
+        "carbs": 40.0,
+        "fat": 10.0,
+        "calories": 550.0
+      }
     }
   ],
-  "total_calories": 529.0,
+  "total_calories": 1079.0,
   "date": "25-10-14"
 }
