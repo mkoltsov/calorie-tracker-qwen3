@@ -32,8 +32,19 @@
         "fat": 10.0,
         "calories": 300.0
       }
+    },
+    {
+      "timestamp": "2025-10-13T23:48:57.675469",
+      "food": "chicken breast with broccolli",
+      "amount": "200g",
+      "nutrition": {
+        "proteins": 62.0,
+        "carbs": 0.0,
+        "fat": 7.2,
+        "calories": 334.0
+      }
     }
   ],
-  "total_calories": 910.0,
+  "total_calories": 1244.0,
   "date": "25-10-13"
 }
