@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-10-14T10:23:30.505005",
+      "food": "ceasar salad with chicken and mayo-based sauce",
+      "amount": "300g",
+      "nutrition": {
+        "proteins": 40.0,
+        "carbs": 11.0,
+        "fat": 36.0,
+        "calories": 529.0
+      }
+    }
+  ],
+  "total_calories": 529.0,
+  "date": "25-10-14"
+}
