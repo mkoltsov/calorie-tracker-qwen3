@@ -10,7 +10,19 @@
         "fat": 1.0,
         "calories": 110.0
       }
+    },
+    {
+      "timestamp": "2025-10-13T23:45:37.998137",
+      "food": "roast beef sandwich",
+      "amount": "200g",
+      "nutrition": {
+        "proteins": 50.0,
+        "carbs": 0.0,
+        "fat": 6.0,
+        "calories": 500.0
+      }
     }
   ],
-  "total_calories": 110.0
+  "total_calories": 610.0,
+  "date": "25-10-13"
 }
