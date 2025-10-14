@@ -21,8 +21,19 @@
         "fat": 10.0,
         "calories": 550.0
       }
+    },
+    {
+      "timestamp": "2025-10-14T17:59:11.254214",
+      "food": "sun-dried tomatoes and spinach shrimp",
+      "amount": "335",
+      "nutrition": {
+        "proteins": 31.0,
+        "carbs": 20.0,
+        "fat": 1.7,
+        "calories": 397.0
+      }
     }
   ],
-  "total_calories": 1079.0,
+  "total_calories": 1476.0,
   "date": "25-10-14"
 }
