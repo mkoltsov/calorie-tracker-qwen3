@@ -54,8 +54,19 @@
         "fat": 33.0,
         "calories": 325.0
       }
+    },
+    {
+      "timestamp": "2025-10-14T18:02:43.673035",
+      "food": "watermelon",
+      "amount": "200g",
+      "nutrition": {
+        "proteins": 1.2,
+        "carbs": 12.0,
+        "fat": 0.2,
+        "calories": 60.0
+      }
     }
   ],
-  "total_calories": 1804.0,
+  "total_calories": 1864.0,
   "date": "25-10-14"
 }
