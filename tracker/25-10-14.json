@@ -43,8 +43,19 @@
         "fat": 16.0,
         "calories": 3.0
       }
+    },
+    {
+      "timestamp": "2025-10-14T18:01:45.772646",
+      "food": "new york style cheesecake",
+      "amount": "130g",
+      "nutrition": {
+        "proteins": 26.0,
+        "carbs": 32.0,
+        "fat": 33.0,
+        "calories": 325.0
+      }
     }
   ],
-  "total_calories": 1479.0,
+  "total_calories": 1804.0,
   "date": "25-10-14"
 }
