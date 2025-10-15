@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-10-15T11:29:39.389868",
+      "food": "scrambled eggs from 5 eggs",
+      "amount": "300g",
+      "nutrition": {
+        "proteins": 30.0,
+        "carbs": 3.0,
+        "fat": 25.0,
+        "calories": 360.0
+      }
+    }
+  ],
+  "total_calories": 360.0,
+  "date": "25-10-15"
+}
