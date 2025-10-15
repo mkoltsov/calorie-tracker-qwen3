@@ -10,11 +10,13 @@ This script:
 5. Commits and pushes the data to git
 """
 
+import argparse
 import json
 import os
 import re
 import requests
 import subprocess
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -76,12 +78,23 @@ class CalorieTracker:
                 return []
         return []
     
-    def get_user_input(self) -> Tuple[str, str]:
-        """Get food type and amount from user input.
+    def get_user_input(self, food_description: str = None, amount: str = None) -> Tuple[str, str]:
+        """Get food type and amount from arguments or user input.
+        
+        Args:
+            food_description: Food description from command line args
+            amount: Amount from command line args
         
         Returns:
             Tuple of (food_description, amount)
         """
+        if food_description and amount:
+            print("🍽️  Calorie Tracker")
+            print("=" * 40)
+            print(f"Food: {food_description}")
+            print(f"Amount: {amount}")
+            return food_description, amount
+        
         print("🍽️  Calorie Tracker")
         print("=" * 40)
         
@@ -286,8 +299,13 @@ class CalorieTracker:
             print(f"⚠️  Git operation failed: {e}")
             print("You may need to manually commit and push the changes.")
     
-    def run(self):
-        """Main execution method."""
+    def run(self, food_description: str = None, amount: str = None):
+        """Main execution method.
+        
+        Args:
+            food_description: Food description from command line args
+            amount: Amount from command line args
+        """
         try:
             # Display existing entries and current status
             self.display_existing_entries()
@@ -298,8 +316,8 @@ class CalorieTracker:
                 print(f"💚 Remaining: {remaining:.1f} calories")
                 print()
             
-            # Get user input
-            food_description, amount = self.get_user_input()
+            # Get user input (from args or interactive)
+            food_description, amount = self.get_user_input(food_description, amount)
             
             # Query LLM for nutritional data
             nutrition = self.query_llm(food_description, amount)
@@ -322,8 +340,40 @@ class CalorieTracker:
 
 def main():
     """Entry point for the calorie tracker."""
+    parser = argparse.ArgumentParser(
+        description="Calorie Tracker - Track your food intake using a local LLM",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  %(prog)s                           # Interactive mode - prompts for input
+  %(prog)s "pizza" "2 slices"        # Quick entry with arguments
+  %(prog)s "chicken breast" "150g"   # Another quick entry example
+        """
+    )
+    
+    parser.add_argument(
+        "food", 
+        nargs="?", 
+        help="Description of the food eaten (e.g., 'ramen noodles', 'chicken breast')"
+    )
+    parser.add_argument(
+        "amount", 
+        nargs="?", 
+        help="Amount of food eaten (e.g., '200g', '1 cup', '2 slices')"
+    )
+    
+    args = parser.parse_args()
+    
+    # Validate arguments - both or neither should be provided
+    if (args.food is None) != (args.amount is None):
+        print("❌ Error: Both food and amount must be provided, or neither for interactive mode")
+        print("\nUsage examples:")
+        print("  python calorie_tracker.py                    # Interactive mode")
+        print("  python calorie_tracker.py 'pizza' '2 slices' # Quick entry")
+        sys.exit(1)
+    
     tracker = CalorieTracker()
-    tracker.run()
+    tracker.run(args.food, args.amount)
 
 
 if __name__ == "__main__":
