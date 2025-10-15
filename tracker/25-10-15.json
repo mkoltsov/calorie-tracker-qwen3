@@ -10,8 +10,19 @@
         "fat": 25.0,
         "calories": 360.0
       }
+    },
+    {
+      "timestamp": "2025-10-15T11:30:57.090965",
+      "food": "parmesan chicken with brocolli",
+      "amount": "350",
+      "nutrition": {
+        "proteins": 70.0,
+        "carbs": 5.0,
+        "fat": 12.0,
+        "calories": 564.0
+      }
     }
   ],
-  "total_calories": 360.0,
+  "total_calories": 924.0,
   "date": "25-10-15"
 }
