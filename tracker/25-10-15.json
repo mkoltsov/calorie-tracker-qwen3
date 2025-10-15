@@ -65,8 +65,19 @@
         "fat": 0.2,
         "calories": 30.0
       }
+    },
+    {
+      "timestamp": "2025-10-15T18:25:43.551092",
+      "food": "steak with buckwheat",
+      "amount": "300g",
+      "nutrition": {
+        "proteins": 78.0,
+        "carbs": 0.0,
+        "fat": 30.0,
+        "calories": 750.0
+      }
     }
   ],
-  "total_calories": 2440.0,
+  "total_calories": 3190.0,
   "date": "25-10-15"
 }
