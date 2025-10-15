@@ -32,8 +32,19 @@
         "fat": 0.2,
         "calories": 46.0
       }
+    },
+    {
+      "timestamp": "2025-10-15T16:58:57.091168",
+      "food": "small cheese pizza",
+      "amount": "2 slices",
+      "nutrition": {
+        "proteins": 24.0,
+        "carbs": 60.0,
+        "fat": 30.0,
+        "calories": 560.0
+      }
     }
   ],
-  "total_calories": 970.0,
+  "total_calories": 1530.0,
   "date": "25-10-15"
 }
