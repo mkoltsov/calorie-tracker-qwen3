@@ -54,8 +54,19 @@
         "fat": 80.0,
         "calories": 880.0
       }
+    },
+    {
+      "timestamp": "2025-10-15T18:23:58.903638",
+      "food": "watermelon",
+      "amount": "1 slice",
+      "nutrition": {
+        "proteins": 0.6,
+        "carbs": 9.2,
+        "fat": 0.2,
+        "calories": 30.0
+      }
     }
   ],
-  "total_calories": 2410.0,
+  "total_calories": 2440.0,
   "date": "25-10-15"
 }
