@@ -43,8 +43,19 @@
         "fat": 30.0,
         "calories": 560.0
       }
+    },
+    {
+      "timestamp": "2025-10-15T18:23:13.502834",
+      "food": "cheddar cheese",
+      "amount": "8 slices",
+      "nutrition": {
+        "proteins": 56.0,
+        "carbs": 0.0,
+        "fat": 80.0,
+        "calories": 880.0
+      }
     }
   ],
-  "total_calories": 1530.0,
+  "total_calories": 2410.0,
   "date": "25-10-15"
 }
