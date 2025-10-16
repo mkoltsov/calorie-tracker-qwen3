@@ -61,8 +61,38 @@
         "fat": 15.0,
         "calories": 255.0
       }
+    },
+    {
+      "timestamp": "2025-10-16T16:46:48.073399",
+      "food": "2 peaches",
+      "nutrition": {
+        "proteins": 0.8,
+        "carbs": 16.0,
+        "fat": 0.4,
+        "calories": 60.0
+      }
+    },
+    {
+      "timestamp": "2025-10-16T16:46:53.525616",
+      "food": "chocolate cake 1 slice",
+      "nutrition": {
+        "proteins": 250.0,
+        "carbs": 35.0,
+        "fat": 2.0,
+        "calories": 10.0
+      }
+    },
+    {
+      "timestamp": "2025-10-16T16:47:12.643289",
+      "food": "1 piece chocolate cookie",
+      "nutrition": {
+        "proteins": 20.0,
+        "carbs": 2.0,
+        "fat": 10.0,
+        "calories": 178.0
+      }
     }
   ],
-  "total_calories": 1227.0,
+  "total_calories": 1475.0,
   "date": "25-10-16"
 }
