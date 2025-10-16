@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-10-16T00:24:54.398570",
+      "food": "peaches",
+      "amount": "2 pieces",
+      "nutrition": {
+        "proteins": 1.0,
+        "carbs": 16.0,
+        "fat": 0.2,
+        "calories": 60.0
+      }
+    }
+  ],
+  "total_calories": 60.0,
+  "date": "25-10-16"
+}
