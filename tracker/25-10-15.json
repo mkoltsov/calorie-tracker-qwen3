@@ -76,8 +76,19 @@
         "fat": 30.0,
         "calories": 750.0
       }
+    },
+    {
+      "timestamp": "2025-10-15T21:14:38.592214",
+      "food": "whole milk",
+      "amount": "1 cup",
+      "nutrition": {
+        "proteins": 8.0,
+        "carbs": 12.0,
+        "fat": 8.0,
+        "calories": 152.0
+      }
     }
   ],
-  "total_calories": 3190.0,
+  "total_calories": 3342.0,
   "date": "25-10-15"
 }
