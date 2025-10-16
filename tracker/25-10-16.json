@@ -31,8 +31,38 @@
         "fat": 30.0,
         "calories": 350.0
       }
+    },
+    {
+      "timestamp": "2025-10-16T14:51:35.789571",
+      "food": "whole milk 1 cup",
+      "nutrition": {
+        "proteins": 8.0,
+        "carbs": 12.0,
+        "fat": 8.0,
+        "calories": 152.0
+      }
+    },
+    {
+      "timestamp": "2025-10-16T14:51:56.652855",
+      "food": "turkey pilaf 200g",
+      "nutrition": {
+        "proteins": 40.0,
+        "carbs": 40.0,
+        "fat": 10.0,
+        "calories": 410.0
+      }
+    },
+    {
+      "timestamp": "2025-10-16T14:52:40.142449",
+      "food": "butter chicken 70 g",
+      "nutrition": {
+        "proteins": 25.0,
+        "carbs": 5.0,
+        "fat": 15.0,
+        "calories": 255.0
+      }
     }
   ],
-  "total_calories": 410.0,
+  "total_calories": 1227.0,
   "date": "25-10-16"
 }
