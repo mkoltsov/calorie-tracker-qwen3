@@ -10,6 +10,17 @@
         "fat": 0.2,
         "calories": 60.0
       }
+    },
+    {
+      "timestamp": "2025-10-16T00:35:48.997701",
+      "food": "water",
+      "amount": "100ml",
+      "nutrition": {
+        "proteins": 0.0,
+        "carbs": 0.0,
+        "fat": 0.0,
+        "calories": 0.0
+      }
     }
   ],
   "total_calories": 60.0,
