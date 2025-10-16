@@ -78,47 +78,40 @@ class CalorieTracker:
                 return []
         return []
     
-    def get_user_input(self, food_description: str = None, amount: str = None) -> Tuple[str, str]:
-        """Get food type and amount from arguments or user input.
+    def get_user_input(self, food_descriptions: List[str] = None) -> List[str]:
+        """Get food descriptions with amounts from arguments or user input.
         
         Args:
-            food_description: Food description from command line args
-            amount: Amount from command line args
+            food_descriptions: List of food descriptions with amounts from command line args
         
         Returns:
-            Tuple of (food_description, amount)
+            List of food descriptions including amounts
         """
-        if food_description and amount:
-            print("🍽️  Calorie Tracker")
-            print("=" * 40)
-            print(f"Food: {food_description}")
-            print(f"Amount: {amount}")
-            return food_description, amount
-        
         print("🍽️  Calorie Tracker")
         print("=" * 40)
         
-        food_description = input("What food did you eat? (e.g., 'ramen noodles'): ").strip()
-        if not food_description:
-            raise ValueError("Food description cannot be empty")
-        
-        amount = input("How much did you eat? (e.g., '200g', '1 cup'): ").strip()
-        if not amount:
-            raise ValueError("Amount cannot be empty")
-        
-        return food_description, amount
+        # Get food descriptions with amounts (from args or prompt)
+        if food_descriptions:
+            print(f"Processing {len(food_descriptions)} food items:")
+            for i, food in enumerate(food_descriptions, 1):
+                print(f"  {i}. {food}")
+            return food_descriptions
+        else:
+            food_description = input("What did you eat? (include amount, e.g., '200g ramen noodles', '2 slices pizza'): ").strip()
+            if not food_description:
+                raise ValueError("Food description cannot be empty")
+            return [food_description]
     
-    def query_llm(self, food_description: str, amount: str) -> Dict[str, float]:
+    def query_llm(self, food_description: str) -> Dict[str, float]:
         """Query the local LLM for nutritional information.
         
         Args:
-            food_description: Description of the food
-            amount: Amount of food eaten
+            food_description: Description of the food with amount included
             
         Returns:
             Dictionary with nutritional information
         """
-        prompt = f"You are a calorie tracking application. Your user ate {amount} of {food_description}, how many proteins, carbs, fat and total number of calories did it have? Provide only 4 numbers, cut the rest"
+        prompt = f"You are a calorie tracking application. Your user ate {food_description}, how many proteins, carbs, fat and total number of calories did it have? Provide only 4 numbers, cut the rest"
         
         payload = {
             "model": "qwen3:8b",
@@ -164,12 +157,11 @@ class CalorieTracker:
         except (ValueError, IndexError) as e:
             raise ValueError(f"Failed to parse nutritional data: {e}")
     
-    def save_to_file(self, food_description: str, amount: str, nutrition: Dict[str, float]) -> str:
+    def save_to_file(self, food_description: str, nutrition: Dict[str, float]) -> str:
         """Save food entry to daily JSON file.
         
         Args:
-            food_description: Description of the food
-            amount: Amount of food eaten
+            food_description: Description of the food with amount included
             nutrition: Nutritional information
             
         Returns:
@@ -187,7 +179,6 @@ class CalorieTracker:
         entry = {
             "timestamp": today.isoformat(),
             "food": food_description,
-            "amount": amount,
             "nutrition": nutrition
         }
         
@@ -242,7 +233,7 @@ class CalorieTracker:
             for i, entry in enumerate(existing_entries, 1):
                 timestamp = entry["timestamp"].split("T")[1][:5]  # Show only time
                 nutrition = entry["nutrition"]
-                print(f"{i}. [{timestamp}] {entry['amount']} {entry['food']}")
+                print(f"{i}. [{timestamp}] {entry['food']}")
                 print(f"   🥩 {nutrition['proteins']:.1f}g protein, 🍞 {nutrition['carbs']:.1f}g carbs, "
                       f"🥑 {nutrition['fat']:.1f}g fat, 🔥 {nutrition['calories']:.1f} cal")
             print("-" * 40)
@@ -299,12 +290,11 @@ class CalorieTracker:
             print(f"⚠️  Git operation failed: {e}")
             print("You may need to manually commit and push the changes.")
     
-    def run(self, food_description: str = None, amount: str = None):
+    def run(self, food_descriptions: List[str] = None):
         """Main execution method.
         
         Args:
-            food_description: Food description from command line args
-            amount: Amount from command line args
+            food_descriptions: List of food descriptions with amounts from command line args
         """
         try:
             # Display existing entries and current status
@@ -317,20 +307,31 @@ class CalorieTracker:
                 print()
             
             # Get user input (from args or interactive)
-            food_description, amount = self.get_user_input(food_description, amount)
+            food_descriptions = self.get_user_input(food_descriptions)
             
-            # Query LLM for nutritional data
-            nutrition = self.query_llm(food_description, amount)
+            # Process each food item sequentially
+            filepaths = []
+            for i, food_description in enumerate(food_descriptions, 1):
+                print(f"\n🔄 Processing item {i}/{len(food_descriptions)}: {food_description}")
+                
+                # Query LLM for nutritional data
+                nutrition = self.query_llm(food_description)
+                
+                # Save to file
+                filepath = self.save_to_file(food_description, nutrition)
+                filepaths.append(filepath)
+                
+                # Show calories for this item
+                print(f"✅ Added: {nutrition['calories']:.1f} calories")
             
-            # Save to file
-            filepath = self.save_to_file(food_description, amount, nutrition)
-            
-            # Calculate and display updated remaining calories
+            # Calculate and display final daily summary
             consumed, remaining = self.calculate_remaining_calories()
             self.display_daily_summary(consumed, remaining)
             
-            # Git commit and push
-            self.git_commit_and_push(filepath)
+            # Git commit and push only after all items are processed
+            if filepaths:
+                print(f"\n🔄 Committing all {len(food_descriptions)} food entries to Git...")
+                self.git_commit_and_push(filepaths[0])  # All entries go to the same daily file
             
         except KeyboardInterrupt:
             print("\n👋 Goodbye!")
@@ -345,35 +346,27 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  %(prog)s                           # Interactive mode - prompts for input
-  %(prog)s "pizza" "2 slices"        # Quick entry with arguments
-  %(prog)s "chicken breast" "150g"   # Another quick entry example
+  %(prog)s                                              # Interactive mode - prompts for input
+  %(prog)s "2 slices pizza"                             # Single food entry
+  %(prog)s "150g chicken breast" "1 cup rice"           # Multiple food entries
+  %(prog)s "300ml milk" "1 apple" "50g nuts"            # Batch processing multiple items
+  %(prog)s "1 cup rice with vegetables"                 # Complex food description
         """
     )
     
     parser.add_argument(
-        "food", 
-        nargs="?", 
-        help="Description of the food eaten (e.g., 'ramen noodles', 'chicken breast')"
-    )
-    parser.add_argument(
-        "amount", 
-        nargs="?", 
-        help="Amount of food eaten (e.g., '200g', '1 cup', '2 slices')"
+        "foods", 
+        nargs="*", 
+        help="Description(s) of the food eaten including amounts (e.g., '2 slices pizza', '150g chicken breast')"
     )
     
     args = parser.parse_args()
     
-    # Validate arguments - both or neither should be provided
-    if (args.food is None) != (args.amount is None):
-        print("❌ Error: Both food and amount must be provided, or neither for interactive mode")
-        print("\nUsage examples:")
-        print("  python calorie_tracker.py                    # Interactive mode")
-        print("  python calorie_tracker.py 'pizza' '2 slices' # Quick entry")
-        sys.exit(1)
+    # Convert empty list to None for interactive mode
+    food_descriptions = args.foods if args.foods else None
     
     tracker = CalorieTracker()
-    tracker.run(args.food, args.amount)
+    tracker.run(food_descriptions)
 
 
 if __name__ == "__main__":
