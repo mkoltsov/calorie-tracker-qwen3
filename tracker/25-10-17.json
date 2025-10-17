@@ -1,0 +1,56 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-10-17T12:57:27.139940",
+      "food": "2 small beef meatballs",
+      "nutrition": {
+        "proteins": 24.0,
+        "carbs": 12.0,
+        "fat": 4.0,
+        "calories": 220.0
+      }
+    },
+    {
+      "timestamp": "2025-10-17T12:57:36.214019",
+      "food": "scrambled eggs 4 eggs",
+      "nutrition": {
+        "proteins": 24.0,
+        "carbs": 2.4,
+        "fat": 20.0,
+        "calories": 280.0
+      }
+    },
+    {
+      "timestamp": "2025-10-17T12:57:51.800496",
+      "food": "2 beef patties",
+      "nutrition": {
+        "proteins": 56.0,
+        "carbs": 0.0,
+        "fat": 24.0,
+        "calories": 464.0
+      }
+    },
+    {
+      "timestamp": "2025-10-17T12:58:05.667425",
+      "food": "1 slice of watermelon",
+      "nutrition": {
+        "proteins": 0.6,
+        "carbs": 7.5,
+        "fat": 0.1,
+        "calories": 30.0
+      }
+    },
+    {
+      "timestamp": "2025-10-17T12:58:16.353147",
+      "food": "indian curry with tofu 50 g",
+      "nutrition": {
+        "proteins": 4.0,
+        "carbs": 1.0,
+        "fat": 2.0,
+        "calories": 40.0
+      }
+    }
+  ],
+  "total_calories": 1034.0,
+  "date": "25-10-17"
+}
