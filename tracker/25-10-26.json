@@ -19,8 +19,38 @@
         "fat": 1.0,
         "calories": 102.0
       }
+    },
+    {
+      "timestamp": "2025-10-26T15:11:33.681478",
+      "food": "beef kebab 150g",
+      "nutrition": {
+        "proteins": 39.0,
+        "carbs": 0.0,
+        "fat": 15.0,
+        "calories": 375.0
+      }
+    },
+    {
+      "timestamp": "2025-10-26T15:12:03.033724",
+      "food": "cheese bread 2 slices",
+      "nutrition": {
+        "proteins": 12.0,
+        "carbs": 25.0,
+        "fat": 15.0,
+        "calories": 300.0
+      }
+    },
+    {
+      "timestamp": "2025-10-26T15:12:30.518226",
+      "food": "heinz ketchup 1 tablespoon",
+      "nutrition": {
+        "proteins": 0.0,
+        "carbs": 5.0,
+        "fat": 0.1,
+        "calories": 20.0
+      }
     }
   ],
-  "total_calories": 852.0,
+  "total_calories": 1547.0,
   "date": "25-10-26"
 }
