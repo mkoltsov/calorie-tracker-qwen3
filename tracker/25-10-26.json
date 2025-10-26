@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-10-26T14:51:30.050157",
+      "food": "beef kebab 300g",
+      "nutrition": {
+        "proteins": 78.0,
+        "carbs": 0.0,
+        "fat": 42.0,
+        "calories": 750.0
+      }
+    },
+    {
+      "timestamp": "2025-10-26T14:51:49.687564",
+      "food": "garlic sauce 20g",
+      "nutrition": {
+        "proteins": 10.0,
+        "carbs": 2.0,
+        "fat": 1.0,
+        "calories": 102.0
+      }
+    }
+  ],
+  "total_calories": 852.0,
+  "date": "25-10-26"
+}
