@@ -1,0 +1,56 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-10-29T01:23:20.987884",
+      "food": "salmon soup with onions 300g",
+      "nutrition": {
+        "proteins": 41.0,
+        "carbs": 9.0,
+        "fat": 26.0,
+        "calories": 456.0
+      }
+    },
+    {
+      "timestamp": "2025-10-29T01:23:51.614307",
+      "food": "salmon with spinach 300g",
+      "nutrition": {
+        "proteins": 67.5,
+        "carbs": 10.8,
+        "fat": 41.7,
+        "calories": 696.0
+      }
+    },
+    {
+      "timestamp": "2025-10-29T01:24:43.156490",
+      "food": "indian curry with chicken and fried onions 300g",
+      "nutrition": {
+        "proteins": 33.0,
+        "carbs": 16.0,
+        "fat": 10.0,
+        "calories": 315.0
+      }
+    },
+    {
+      "timestamp": "2025-10-29T01:24:47.982984",
+      "food": "3 cups of milk",
+      "nutrition": {
+        "proteins": 24.0,
+        "carbs": 36.0,
+        "fat": 24.0,
+        "calories": 456.0
+      }
+    },
+    {
+      "timestamp": "2025-10-29T01:25:08.435485",
+      "food": "1 apple",
+      "nutrition": {
+        "proteins": 0.5,
+        "carbs": 14.0,
+        "fat": 0.1,
+        "calories": 60.0
+      }
+    }
+  ],
+  "total_calories": 1983.0,
+  "date": "25-10-29"
+}
