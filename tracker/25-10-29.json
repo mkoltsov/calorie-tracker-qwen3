@@ -49,8 +49,48 @@
         "fat": 0.1,
         "calories": 60.0
       }
+    },
+    {
+      "timestamp": "2025-10-29T23:43:15.861562",
+      "food": "parmesan chicken with grits 400g",
+      "nutrition": {
+        "proteins": 40.0,
+        "carbs": 30.0,
+        "fat": 25.0,
+        "calories": 300.0
+      }
+    },
+    {
+      "timestamp": "2025-10-29T23:44:01.294251",
+      "food": "quinoa with roasted vegetables 300g",
+      "nutrition": {
+        "proteins": 15.0,
+        "carbs": 78.0,
+        "fat": 10.5,
+        "calories": 466.5
+      }
+    },
+    {
+      "timestamp": "2025-10-29T23:44:05.135726",
+      "food": "2 appls",
+      "nutrition": {
+        "proteins": 5.0,
+        "carbs": 42.0,
+        "fat": 0.2,
+        "calories": 190.0
+      }
+    },
+    {
+      "timestamp": "2025-10-29T23:44:32.638926",
+      "food": "steak and buckwheat 400g",
+      "nutrition": {
+        "proteins": 74.0,
+        "carbs": 42.0,
+        "fat": 26.0,
+        "calories": 800.0
+      }
     }
   ],
-  "total_calories": 1983.0,
+  "total_calories": 3739.5,
   "date": "25-10-29"
 }
