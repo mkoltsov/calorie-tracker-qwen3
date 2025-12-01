@@ -49,8 +49,18 @@
         "fat": 0.3,
         "calories": 105.0
       }
+    },
+    {
+      "timestamp": "2025-12-01T16:56:29.867595",
+      "food": "1 cup of salted almonds",
+      "nutrition": {
+        "proteins": 15.0,
+        "carbs": 6.0,
+        "fat": 50.0,
+        "calories": 579.0
+      }
     }
   ],
-  "total_calories": 1477.0,
+  "total_calories": 2056.0,
   "date": "25-12-01"
 }
