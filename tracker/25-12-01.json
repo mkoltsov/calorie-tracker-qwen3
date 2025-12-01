@@ -1,0 +1,36 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-12-01T15:00:11.410673",
+      "food": "2 egg bites with bacon,",
+      "nutrition": {
+        "proteins": 42.0,
+        "carbs": 1.2,
+        "fat": 25.0,
+        "calories": 280.0
+      }
+    },
+    {
+      "timestamp": "2025-12-01T15:01:17.753838",
+      "food": "salmon with pesto and green beans, 300g",
+      "nutrition": {
+        "proteins": 50.0,
+        "carbs": 6.0,
+        "fat": 31.0,
+        "calories": 536.0
+      }
+    },
+    {
+      "timestamp": "2025-12-01T15:02:32.188495",
+      "food": "chicken with cauliflower and cream 300g",
+      "nutrition": {
+        "proteins": 78.0,
+        "carbs": 1.0,
+        "fat": 14.0,
+        "calories": 461.0
+      }
+    }
+  ],
+  "total_calories": 1277.0,
+  "date": "25-12-01"
+}
