@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-12-02T00:05:20.922530",
+      "food": "1 cup of water",
+      "nutrition": {
+        "proteins": 0.0,
+        "carbs": 0.0,
+        "fat": 0.0,
+        "calories": 0.0
+      }
+    }
+  ],
+  "total_calories": 0.0,
+  "date": "25-12-02"
+}
