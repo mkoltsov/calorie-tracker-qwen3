@@ -59,8 +59,38 @@
         "fat": 50.0,
         "calories": 579.0
       }
+    },
+    {
+      "timestamp": "2025-12-01T20:31:04.267630",
+      "food": "20 grapes",
+      "nutrition": {
+        "proteins": 15.0,
+        "carbs": 0.5,
+        "fat": 0.0,
+        "calories": 60.0
+      }
+    },
+    {
+      "timestamp": "2025-12-01T20:31:53.364199",
+      "food": "aragula salad with 5 slices jamon and sun-dried tomatoes in oil",
+      "nutrition": {
+        "proteins": 413.0,
+        "carbs": 21.0,
+        "fat": 4.0,
+        "calories": 26.0
+      }
+    },
+    {
+      "timestamp": "2025-12-01T20:32:25.331782",
+      "food": "sandwich with butter and red caviar",
+      "nutrition": {
+        "proteins": 2.0,
+        "carbs": 18.0,
+        "fat": 11.0,
+        "calories": 222.0
+      }
     }
   ],
-  "total_calories": 2056.0,
+  "total_calories": 2364.0,
   "date": "25-12-01"
 }
