@@ -1,0 +1,66 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-12-06T22:47:15.202522",
+      "food": "200g potato hash with sausage and 2 eggs, 1 slice of parmesan",
+      "nutrition": {
+        "proteins": 32.0,
+        "carbs": 40.0,
+        "fat": 21.0,
+        "calories": 480.0
+      }
+    },
+    {
+      "timestamp": "2025-12-06T22:47:34.957079",
+      "food": "4 slices of fried eggplants with tomatoes",
+      "nutrition": {
+        "proteins": 12.0,
+        "carbs": 40.0,
+        "fat": 20.0,
+        "calories": 280.0
+      }
+    },
+    {
+      "timestamp": "2025-12-06T22:48:18.698586",
+      "food": "50g olivier salad",
+      "nutrition": {
+        "proteins": 0.5,
+        "carbs": 4.0,
+        "fat": 13.0,
+        "calories": 140.0
+      }
+    },
+    {
+      "timestamp": "2025-12-06T22:48:29.106714",
+      "food": "100 g caramel kettle corn",
+      "nutrition": {
+        "proteins": 2.0,
+        "carbs": 25.0,
+        "fat": 12.0,
+        "calories": 216.0
+      }
+    },
+    {
+      "timestamp": "2025-12-06T22:48:46.116506",
+      "food": "1 full air-fryed fish 200g",
+      "nutrition": {
+        "proteins": 40.0,
+        "carbs": 0.0,
+        "fat": 26.0,
+        "calories": 416.0
+      }
+    },
+    {
+      "timestamp": "2025-12-06T22:49:06.264073",
+      "food": "1 scoop of wheat protein powder with a cup of 2% milk",
+      "nutrition": {
+        "proteins": 28.0,
+        "carbs": 14.0,
+        "fat": 8.5,
+        "calories": 245.0
+      }
+    }
+  ],
+  "total_calories": 1777.0,
+  "date": "25-12-06"
+}
